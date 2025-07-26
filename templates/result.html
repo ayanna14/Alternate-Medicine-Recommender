@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Recommended Medicines for: {{ selected }}</h1>
+        <ul>
+            {% for med in recommendations %}
+            <li>{{ med }}</li>
+            {% endfor %}
+        </ul>
+        <a href="/">Try Another</a>
+    </div>
+</body>
+</html>
